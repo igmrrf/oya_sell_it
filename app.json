@@ -3,30 +3,44 @@
     "name": "OyaSellIt",
     "slug": "OyaSellIt",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "orientation": "default",
+    "icon": "./app/assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./app/assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#e63c4b"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "entitlements": {
+        "com.apple.developer.networking.wifi-info": "true"
+      },
+      "bundleIdentifier": "com.oya.sellit",
+      "buildNumber": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./app/assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF",
+        "package": "com.oya.sellit",
+        "versionCode": 1
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    }
+  },
+  "Info": {
+    "plist": {
+      "UIBackgroundModes": ["location", "fetch"],
+      "NSLocationUsageDescription": "App requires geolocation to improve the quality of the service",
+      "NSLocationAlwaysAndWhenInUseUsageDescription": "App requires geolocation to improve the quality of the service",
+      "NSLocationWhenInUseUsageDescription": "App requires geolocation to improve the quality of the service",
+      "NSLocationAlwaysUsageDescription": "App requires geolocation to improve the quality of the service"
     }
   }
 }

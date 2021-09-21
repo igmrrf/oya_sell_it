@@ -1,0 +1,5 @@
+{
+  "jwtkey": "JWT_PRIVATE_KEY",
+  "db": "DATABASE",
+  "port": "PORT"
+}
